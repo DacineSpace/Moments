@@ -1,0 +1,143 @@
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: -1; /* Keeps video in the background */
+  }
+  
+  /* Apply a general background */
+  body {
+      background-color: #f4f4f9; /* Light background for aesthetics */
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+  
+  /* Main content container */
+  .content {
+      display: flex;
+      align-items: flex-start; /* Aligns items to the top of the container */
+      justify-content: flex-start;
+      margin-left: 50px; /* Cool left margin */
+      margin-top: 50px;  /* Some top margin */
+      gap: 20px; /* Space between the title and the smaller text */
+      position: relative; /* Makes sure content stays in the normal flow */
+      z-index: 1; /* Ensure it's above the background */
+  }
+  
+  /* Style for the big title */
+  .main-title {
+      position:fixed;
+      font-size: 63px;
+      font-weight: bold;
+      color: #ffffff; /* Dark color for the title */
+      margin: 0;
+      top: 11%; /* Vertically centered */
+      left: 39%; /* Horizontally centered */
+  }
+  
+  /* Style for the smaller text */
+  .subtitle {
+      position: fixed;
+      font-size: 12px;
+      color: #ffffff; /* Lighter color for smaller text */
+      margin: 0;
+      top: 12%; /* Vertically centered */
+      left: 60%; /* Horizontally centered */
+  }
+  
+  /* Style the audio element */
+  audio {
+      width: 50px; /* Adjust the size of the audio player */
+      height: 50px; /* Optional: to adjust height if needed */
+      position: fixed; /* Fix it in a corner */
+      bottom: 10px; /* Position it near the bottom */
+      right: 10px; /* Position it near the right */
+      opacity: 0.6; /* Optional: makes it a bit transparent */
+  }
+  
+  /* Center the text at the middle of the screen */
+  .center-text {
+      position: fixed; /* Position it on the screen */
+      top: 77%; /* Vertically centered */
+      left: 50%; /* Horizontally centered */
+      transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+      font-size: 23px;
+      color: white; /* White color */
+      font-weight: bold;
+      z-index: 2; /* Ensures text is above the video */
+  }
+  
+  /* Style for the "Hi" text */
+  .text {
+      position: fixed; /* Position it on the screen */
+      top: 60%; /* Slightly adjusted vertically */
+      left: 50%; /* Horizontally centered */
+      transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+      font-size: 23px;
+      color: white; /* White color */
+      font-weight: bold;
+      z-index: 2; /* Ensures text is above the video */
+  }
+  /*Imagessss.......*/
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    padding: 20px;
+  }
+  
+  .image-container {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .image-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .image-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 10px;
+  }
+  
+  .quote {
+    margin-top: 15px;
+    font-style: italic;
+    font-size: 16px;
+    transition: opacity 0.4s ease;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .table{
+    width: 60px ;
+    height: 20px ;
+    border: #ffffff;
+    position: fixed;
+    top: 94%;
+    left: 1%;
+    border-radius: 12px;
+  }

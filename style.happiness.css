@@ -1,0 +1,173 @@
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keeps video in the background */
+  }
+  
+  /* Apply a general background */
+  body {
+      background-color: #f4f4f9; /* Light background for aesthetics */
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+  
+  /* Main content container */
+  .content {
+      display: flex;
+      align-items: flex-start; /* Aligns items to the top of the container */
+      justify-content: flex-start;
+      margin-left: 50px; /* Cool left margin */
+      margin-top: 50px;  /* Some top margin */
+      gap: 20px; /* Space between the title and the smaller text */
+      position: relative; /* Makes sure content stays in the normal flow */
+      z-index: 1; /* Ensure it's above the background */
+  }
+  
+  /* Style for the big title */
+  .main-title {
+      position:fixed;
+      font-size: 66px;
+      font-weight: bold;
+      color: #ffffff; /* Dark color for the title */
+      margin: 0;
+      top: 9%; /* Vertically centered */
+      left: 5%; /* Horizontally centered */
+  }
+  
+  /* Style for the smaller text */
+  .subtitle {
+      position: fixed;
+      font-size: 13px;
+      color: #ffffff; /* Lighter color for smaller text */
+      margin: 0;
+      top: 23%; /* Vertically centered */
+      left: 5%; /* Horizontally centered */
+  }
+  
+  /* Style the audio element */
+  audio {
+      width: 50px; /* Adjust the size of the audio player */
+      height: 50px; /* Optional: to adjust height if needed */
+      position: fixed; /* Fix it in a corner */
+      bottom: 10px; /* Position it near the bottom */
+      right: 10px; /* Position it near the right */
+      opacity: 0.6; /* Optional: makes it a bit transparent */
+  }
+  
+  /* Center the text at the middle of the screen */
+  .center-text {
+      position: fixed; /* Position it on the screen */
+      top: 39%; /* Vertically centered */
+      left: 24.5%; /* Horizontally centered */
+      transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+      font-size: 17px;
+      color: white; /* White color */
+      z-index: 2; /* Ensures text is above the video */
+      max-width: 500px;
+  }
+  
+  /* Style for the "Hi" text */
+  .text {
+      position: fixed; /* Position it on the screen */
+      top: 60%; /* Slightly adjusted vertically */
+      left: 50%; /* Horizontally centered */
+      transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+      font-size: 23px;
+      color: white; /* White color */
+      font-weight: bold;
+      z-index: 2; /* Ensures text is above the video */
+  }
+    /*Cards*/
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 80%;
+    max-width: 600px;
+    position: fixed;
+    left: 3%;
+    top: 52%;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 210px;
+    height: 64px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    }
+
+  .card:hover {
+    transform: translateY(-10px);
+  }
+
+  .card h2 {
+    font-size: 24px;
+    color: #c6a812;
+    margin-bottom: 10px;
+    opacity: 1;
+  }
+
+  .card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+
+  .moment-link {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+  }
+  
+  .moment-link {
+  
+    display: inline-block;
+  }
+  
+  .moment-link::after,
+  .moment-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+  }
+  
+  .moment-link::before {
+    top: -5px;
+    transform-origin: left;
+  }
+  
+  .moment-link:hover::after,
+  .moment-link:hover::before {
+    transform: scaleX(1);
+  }
+  .moment-link:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  

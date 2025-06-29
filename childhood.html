@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Childhood</title>
+  <link rel="stylesheet" href="style.childhood.css" />
+
+  <link rel="icon" type="image/png" href="Images/favicon4.png">
+</head>
+
+
+<body>
+  <section class="showcase">
+    
+    <video src="videos/background.childhood.mp4" muted loop autoplay></video>
+  </section>
+
+  <div class="content">
+    <h1 class="main-title">Childhood</h1>
+  </div>
+
+
+  <audio id="audio" src="Music/childhood.mp3" controls autoplay loop></audio>
+
+  <!--Images-->
+  <section class="memory-flipbook">
+    <div class="memory-card active">
+      <h2>My First Bike</h2>
+      <img src="Images/childhood1.jpg" alt="First Bike">
+      <p>That feeling of freedom on two wheels was unforgettable.</p>
+    </div>
+  
+    <div class="memory-card">
+      <h2>My First Drawing</h2>
+      <img src="Images/childhood2.jpg" alt="First Best Friend">
+      <p>It lived on the fridge like a masterpiece.</p>
+    </div>
+  
+    <div class="memory-card">
+      <h2>My First Favorite Game</h2>
+      <img src="Images/childhood4.jpg" alt="Favorite Cartoon">
+      <p>I never wanted it to end.</p>
+    </div>
+
+    <div class="memory-card">
+      <h2>My Favorite Toy</h2>
+      <img src="Images/childhood3.jpg" alt="Favorite Cartoon">
+      <p>It went everywhere I did.</p>
+    </div>
+  
+    <button id="nextBtn">Next Memory ➜</button>
+  </section>
+  
+  <script>
+    const cards = document.querySelectorAll('.memory-card');
+    const nextBtn = document.getElementById('nextBtn');
+    let current = 0;
+  
+    nextBtn.addEventListener('click', () => {
+      cards[current].classList.remove('active');
+      current = (current + 1) % cards.length;
+      cards[current].classList.add('active');
+    });
+  </script>
+
+  <a href="index.html" class="moment-link">Moments</a>
+</body>
+</html>

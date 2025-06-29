@@ -1,0 +1,194 @@
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keeps video in the background */
+  }
+  
+  /* Apply a general background */
+  body {
+      background-color: #f4f4f9; /* Light background for aesthetics */
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+  
+  /* Main content container */
+  .content {
+      display: flex;
+      align-items: flex-start; /* Aligns items to the top of the container */
+      justify-content: flex-start;
+      margin-left: 50px; /* Cool left margin */
+      margin-top: 50px;  /* Some top margin */
+      gap: 20px; /* Space between the title and the smaller text */
+      position: relative; /* Makes sure content stays in the normal flow */
+      z-index: 1; /* Ensure it's above the background */
+  }
+  
+  /* Style for the big title */
+  .main-title {
+      position:fixed;
+      font-size: 66px;
+      font-weight: bold;
+      color: #ffffff; /* Dark color for the title */
+      margin: 0;
+      top: 5%; /* Vertically centered */
+      left: 1%; /* Horizontally centered */
+  }
+  
+  /* Style for the smaller text */
+  .subtitle {
+      position: fixed;
+      font-size: 12px;
+      color: #ffffff; /* Lighter color for smaller text */
+      margin: 0;
+      top: 18%; /* Vertically centered */
+      left: 8%; /* Horizontally centered */
+  }
+  
+  /* Style the audio element */
+  audio {
+      width: 50px; /* Adjust the size of the audio player */
+      height: 50px; /* Optional: to adjust height if needed */
+      position: fixed; /* Fix it in a corner */
+      bottom: 10px; /* Position it near the bottom */
+      right: 10px; /* Position it near the right */
+      opacity: 0.6; /* Optional: makes it a bit transparent */
+  }
+  
+  /* Center the text at the middle of the screen */
+  .center-text {
+      position: fixed; /* Position it on the screen */
+      top: 36%; /* Vertically centered */
+      left: 23%; /* Horizontally centered */
+      transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+      font-size: 15px;
+      color: white; /* White color */
+      z-index: 2; /* Ensures text is above the video */
+  }
+  
+  /* Style for the "Hi" text */
+  .text {
+      position: fixed; /* Position it on the screen */
+      top: 60%; /* Slightly adjusted vertically */
+      left: 50%; /* Horizontally centered */
+      transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+      font-size: 23px;
+      color: white; /* White color */
+      font-weight: bold;
+      z-index: 2; /* Ensures text is above the video */
+  }
+/* Imagessss */
+.memory-flipbook {
+  max-width: 500px;
+  max-height: 430px;
+  margin: 1px auto; /* Centers horizontally */
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Aligns children vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  text-align: center; /* Centers text */
+}
+
+.memory-card {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.memory-card.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.memory-card h2 {
+  font-family: 'Chewy', cursive;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #fff0dc;
+}
+
+.memory-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+  object-fit: cover;
+  max-height: 250px;
+}
+
+.memory-card p {
+  font-size: 16px;
+  color: rgb(23, 43, 50);
+}
+
+#nextBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #77b1d4;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+#nextBtn:hover {
+  background: #5181a0;
+}
+
+
+.moment-link {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+}
+
+.moment-link {
+
+  display: inline-block;
+}
+
+.moment-link::after,
+.moment-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.moment-link::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.moment-link:hover::after,
+.moment-link:hover::before {
+  transform: scaleX(1);
+}
+.moment-link:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
